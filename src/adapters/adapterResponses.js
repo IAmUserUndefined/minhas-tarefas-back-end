@@ -1,9 +1,10 @@
-module.exports = class adaptResponse {
+const ok = async (response) => {
+	return {
+		statusCode: 200,
+		response: response
+	};
+};
 
-	static async ok(response){
-		return {
-			statusCode: 200,
-			response: response
-		};
-	}
+module.exports = {
+	ok
 };
