@@ -1,5 +1,5 @@
 module.exports = {
-	globalSetup: "<rootDir>/dotenv.config.js",
+	globalSetup: "<rootDir>/dotenv.test.config.js",
 	clearMocks: true,
 	coverageProvider: "v8",
 	verbose: true,
