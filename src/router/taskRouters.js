@@ -2,8 +2,8 @@ const { Router } = require("express");
 
 const authenticateUser = require("../middlewares/authenticateUser");
 
-const adaptMiddlewares = require("../adapters/adapterMiddlewares");
-const adaptRouters = require("../adapters/adapterRouters");
+const adaptMiddlewares = require("../adapters/adapterMiddlewares/adapterMiddlewares");
+const adaptRouters = require("../adapters/adapterRouters/adapterRouters");
 
 const CreateTaskController = require("../useCases/Task/CreateTask/CreateTaskController");
 const GetTasksController = require("../useCases/Task/GetTasks/GetTasksController");
