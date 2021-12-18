@@ -1,7 +1,7 @@
 const { MissingParamError } = require("../../../utils/errors/index");
 
 const Helper = require("../../../utils/helper/Helper");
-const { TaskRepository } = require("../../../repositories/Task");
+const { TaskRepository } = require("../../../repositories/Task/TaskRepository/TaskRepository");
 
 module.exports = class CreateTaskRules {
     

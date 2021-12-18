@@ -2,7 +2,7 @@
 
 jest.setTimeout(15000);
 
-const { TaskTestRepository } = require("../../../repositories/Task");
+const { TaskTestRepository } = require("../../../repositories/Task/TaskTestRepository/TaskTestRepository");
 
 const taskTestRepository = new TaskTestRepository();
 

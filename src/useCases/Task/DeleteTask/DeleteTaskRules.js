@@ -1,4 +1,4 @@
-const { TaskRepository } = require("../../../repositories/Task");
+const { TaskRepository } = require("../../../repositories/Task/TaskRepository/TaskRepository");
 
 module.exports = class DeleteTaskRules {
 

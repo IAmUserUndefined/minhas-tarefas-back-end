@@ -1,4 +1,4 @@
-const { ok } = require("../../../adapters/adapterResponses");
+const { ok } = require("../../../adapters/adapterResponses/adapterResponses");
 const FinishTaskRules = require("./FinishTaskRules");
 
 module.exports = new class FinishTaskController {

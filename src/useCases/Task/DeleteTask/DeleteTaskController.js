@@ -1,4 +1,4 @@
-const { ok } = require("../../../adapters/adapterResponses");
+const { ok } = require("../../../adapters/adapterResponses/adapterResponses");
 const DeleteTaskRules = require("./DeleteTaskRules");
 
 module.exports = new class DeleteTaskController {

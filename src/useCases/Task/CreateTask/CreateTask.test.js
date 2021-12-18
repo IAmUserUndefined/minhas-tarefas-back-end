@@ -4,7 +4,7 @@ jest.setTimeout(15000);
 
 require("dotenv/config");
 
-const { TaskTestRepository } = require("../../../repositories/Task");
+const { TaskTestRepository } = require("../../../repositories/Task/TaskTestRepository/TaskTestRepository");
 
 const taskTestRepository = new TaskTestRepository();
 
