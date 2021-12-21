@@ -43,11 +43,17 @@ class UserRepository {
 	}
 
 	async findEmailByEmail(email) {
-		const userEmail = await UserModel.findOne({
-			where: { email: email },
-			attributes: ["email"]
-		});
-		return userEmail;
+		try {
+			const userEmail = await UserModel.findOne({
+				where: { email: email },
+				attributes: ["email"]
+			});
+			return userEmail;
+		}
+
+		catch(e) {
+			console.log(e);
+		}
 	}
 
 	async findByEmailVerified(email) {
