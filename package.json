@@ -9,6 +9,7 @@
     "test": "jest --detectOpenHandles",
     "posttest": "sequelize db:migrate:undo:all dotenv_config_path=.env.test",
     "dev": "nodemon src/server.js",
+    "prestart": "sequelize db:migrate",
     "start": "node src/server.js"
   },
   "license": "MIT",
@@ -16,7 +17,6 @@
     "eslint": "^7.32.0",
     "jest": "^27.0.6",
     "nodemon": "^2.0.7",
-    "sequelize-cli": "^6.2.0",
     "sqlite3": "^5.0.2",
     "supertest": "^6.1.6"
   },
@@ -30,6 +30,7 @@
     "nodemailer": "^6.6.2",
     "nodemailer-express-handlebars": "^4.0.0",
     "sequelize": "^6.6.4",
+    "sequelize-cli": "^6.2.0",
     "uuid": "^8.3.2"
   }
 }
