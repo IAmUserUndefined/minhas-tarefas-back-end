@@ -20,6 +20,7 @@
 # Tecnologias
 - Node
 - Javascript
+- Nodemailer
 - Sequelize
 
 # Instalação
