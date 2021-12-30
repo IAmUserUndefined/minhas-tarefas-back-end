@@ -43,7 +43,12 @@ class TaskRepository {
 			attributes: ["id", "taskName", "status"],
 			where: {
 				userId: userId
-			}
+			},
+			order:[
+				[
+					"createdAt", "DESC"
+				]
+			]
 		});
 
 		return task;
