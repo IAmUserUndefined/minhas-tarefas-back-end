@@ -46,7 +46,7 @@ class TaskRepository {
 			},
 			order:[
 				[
-					"createdAt", "DESC"
+					"createdAt", "ASC"
 				]
 			]
 		});
