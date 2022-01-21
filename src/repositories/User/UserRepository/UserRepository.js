@@ -8,7 +8,7 @@ class UserRepository {
 			email: email,
 			password: hash,
 			verificationToken: token,
-		});
+		}).catch(err => console.log(err));
 	}
 
 	async verifyEmail(email, token) {
@@ -23,7 +23,7 @@ class UserRepository {
 					]
 				}
 			}
-		);
+		).catch(err => console.log(err));
 	}
 
 	async delete(id) {
@@ -31,14 +31,14 @@ class UserRepository {
 			where: {
 				id: id
 			}
-		});
+		}).catch(err => console.log(err));
 	}
 
 	async findEmailById(id) {
 		const userEmail = await UserModel.findOne({
 			where: { id: id },
 			attributes: ["email"]
-		});
+		}).catch(err => console.log(err));
 		return userEmail;
 	}
 
@@ -46,7 +46,7 @@ class UserRepository {
 		const userEmail = await UserModel.findOne({
 			where: { email: email },
 			attributes: ["email"]
-		});
+		}).catch(err => console.log(err));
 		return userEmail;
 	}
 
@@ -60,7 +60,7 @@ class UserRepository {
 				]
 			},
 			attributes: ["email"]
-		});
+		}).catch(err => console.log(err));
 		return userEmail;
 	}
 
@@ -70,7 +70,7 @@ class UserRepository {
 			where: {
 				email: email,
 			},
-		});
+		}).catch(err => console.log(err));
 
 		return id;
 	}
@@ -79,7 +79,7 @@ class UserRepository {
 		const { password } = await UserModel.findOne({
 			attributes: ["password"],
 			where: { id : id }
-		});
+		}).catch(err => console.log(err));
         
 		return password;
 	}
@@ -88,7 +88,7 @@ class UserRepository {
 		const { password } = await UserModel.findOne({
 			attributes: ["password"],
 			where: { email : email }
-		});
+		}).catch(err => console.log(err));
         
 		return password;
 	}
@@ -103,7 +103,7 @@ class UserRepository {
 					{ verificationToken: verificationToken }
 				],
 			},
-		});
+		}).catch(err => console.log(err));
 		return userVerificationToken;
 	}
 
@@ -117,7 +117,7 @@ class UserRepository {
 					{ verificationToken: verificationToken }
 				],
 			},
-		});
+		}).catch(err => console.log(err));
 		return userVerificationToken;
 	}
 
@@ -129,7 +129,7 @@ class UserRepository {
 					id: id,
 				},
 			}
-		);
+		).catch(err => console.log(err));
 	}
 
 	async updateVerificationTokenByEmail(email, verificationToken) {
@@ -140,7 +140,7 @@ class UserRepository {
 					email: email,
 				},
 			}
-		);
+		).catch(err => console.log(err));
 	}
 
 	async getVerficationTokenExpiryDateById(id, verificationToken) {
@@ -153,7 +153,7 @@ class UserRepository {
 					{ verificationToken: verificationToken }
 				],
 			},
-		});
+		}).catch(err => console.log(err));
 		return verificationTokenExpiryDate;
 	}
 
@@ -167,7 +167,7 @@ class UserRepository {
 					{ verificationToken: verificationToken }
 				],
 			},
-		});
+		}).catch(err => console.log(err));
 		return verificationTokenExpiryDate;
 	}
     
@@ -179,7 +179,7 @@ class UserRepository {
 					id: id,
 				},
 			}
-		);
+		).catch(err => console.log(err));
 	}
 
 	async updateVerificationTokenExpiryDateByEmail(email, verificationTokenExpiryDate) {
@@ -190,7 +190,7 @@ class UserRepository {
 					email: email,
 				},
 			}
-		);
+		).catch(err => console.log(err));
 	}
 
 	async updateEmail(id, email) {
@@ -201,7 +201,7 @@ class UserRepository {
 					id: id,
 				},
 			}
-		);
+		).catch(err => console.log(err));
 	}
 
 	async updatePasswordById(id, passwordNew) {
@@ -212,7 +212,7 @@ class UserRepository {
 					id: id,
 				},
 			}
-		);
+		).catch(err => console.log(err));
 	}
     
 	async updatePasswordByEmail(email, passwordNew) {
@@ -223,7 +223,7 @@ class UserRepository {
 					email: email,
 				},
 			}
-		);
+		).catch(err => console.log(err));
 	}
 }
 

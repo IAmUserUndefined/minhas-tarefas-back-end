@@ -7,7 +7,7 @@ class TaskRepository {
 			id: id,
 			userId: userId,
 			taskName: taskName
-		});
+		}).catch(err => console.log(err));
 	}
 
 	async delete(userId, id) {
@@ -19,7 +19,7 @@ class TaskRepository {
 					{ userId: userId }
 				]
 			}
-		});
+		}).catch(err => console.log(err));
 	}
 
 	async finishTask(id, userId){
@@ -34,7 +34,7 @@ class TaskRepository {
 					]
 				}
 			}
-		);
+		).catch(err => console.log(err));
 	}
 
 	async getTasks(userId) {
@@ -49,7 +49,7 @@ class TaskRepository {
 					"createdAt", "ASC"
 				]
 			]
-		});
+		}).catch(err => console.log(err));
 
 		return task;
 	}
